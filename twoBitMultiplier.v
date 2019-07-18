@@ -13,7 +13,7 @@ twoBitFullAdder twoBitAdd(
 		.A1	(A1tmp),
 		.B0	(B0tmp),
 		.B1	(IZero),
-		.C1   (IZero),
+		.Ci   (IZero),
 		.Co	(S3),
 		.S0	(S1),
 		.S1	(S2)
