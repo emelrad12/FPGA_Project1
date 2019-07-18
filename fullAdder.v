@@ -20,4 +20,8 @@ halfAdder hAdd2(
 
 assign Co = hAdd1C|hAdd2C;
 
+
+
+
+
 endmodule
