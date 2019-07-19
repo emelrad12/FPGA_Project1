@@ -16,8 +16,7 @@ twoBitFullAdder twoBitAdd(
 		.Ci   (IZero),
 		.Co	(S3),
 		.S0	(S1),
-		.S1	(S2),
-		.clk	(clkr)
+		.S1	(S2)
 	);
 	
 	
