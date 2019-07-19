@@ -3,7 +3,6 @@ module twoBitFullAdder (A0, A1, B0, B1, S0, S1, Co, Ci);
 input wire A0, A1, B0, B1, Ci;
 output wire S0,S1, Co;
 wire fAdd1C;
-
 fullAdder fAdd1(
 		.A0   (A0),
       .B0   (B0),
