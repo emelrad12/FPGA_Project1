@@ -1,6 +1,6 @@
-module twoBitFullAdder (A0, A1, B0, B1, S0, S1, Co, Ci, clk);
+module twoBitFullAdder (A0, A1, B0, B1, S0, S1, Co, Ci);
 
-input wire A0, A1, B0, B1, Ci, clk;
+input wire A0, A1, B0, B1, Ci;
 output wire S0,S1, Co;
 wire fAdd1C;
 reg fAdd1Cr;
