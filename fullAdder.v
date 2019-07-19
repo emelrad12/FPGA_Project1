@@ -1,6 +1,6 @@
 module fullAdder (  A0, B0, Ci, S0, Co );
 
-input wire A0, B0,  Ci;
+input wire A0, B0, Ci;
 output S0, Co;
 wire S0, hAdd1S, hAdd1C, hAdd2C,Co;
 
