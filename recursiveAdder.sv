@@ -9,6 +9,6 @@ fullAdder adder(Atr, Btr, Citr, S, Cotr);
 always @(posedge clk) begin
 	Citr=Cotr;
 end
-RecAdderOutput recOutput(S, Sarr, clk);
+RecAdderOutput recOutput(S, Sarr, ~clk);
 
 endmodule
