@@ -3,7 +3,7 @@ module RecAdderOutput (S, Sarr, clk);
 input wire S,clk;
 output wire Sarr[3:0];
 reg Sarrt[3:0];
-integer count;
+byte count;
 
 assign Sarr=Sarrt;
 
