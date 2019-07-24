@@ -1,8 +1,8 @@
-module sixteenBitAdder (A, B, carryIn, carryOut, S, split);
+module sixteenBitAdder (A, B, Ci, Co, S, split);
 input wire [0:7]A, B;
-input wire carryIn, split;
+input wire Ci, split;
 output wire [0:15]S;
-output wire carryOut;
+output wire Co;
 wire inputFirstHalf,inputSecondHalf;
 wire OutputFirstHalf, OutputSecondHalf;
 reg carrytr;
