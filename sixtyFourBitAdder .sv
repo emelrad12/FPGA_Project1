@@ -10,8 +10,8 @@ assign inputOneFirstHalf=A[0:31];
 assign inputOneSecondHalf=A[32:63];
 assign inputTwoFirstHalf=B[0:31];
 assign inputTwoSecondHalf=B[32:63];
-trityTwoBitAdder Adder1(inputOneFirstHalf, inputTwoFirstHalf, Ci, Ctr, OutputFirstHalf, split16, split32 );
+thirtyTwoBitAdder Adder1(inputOneFirstHalf, inputTwoFirstHalf, Ci, Ctr, OutputFirstHalf, split16, split32 );
 condInput splitter(Ctr, split64, Ctr2);
-trityTwoBitAdder Adder2(inputOneSecondHalf, inputTwoSecondHalf, Ctr2, Co, OutputSecondHalf, split16, split32);
+thirtyTwoBitAdder Adder2(inputOneSecondHalf, inputTwoSecondHalf, Ctr2, Co, OutputSecondHalf, split16, split32);
 assign S={OutputFirstHalf,OutputSecondHalf};
 endmodule
