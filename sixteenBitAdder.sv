@@ -11,8 +11,7 @@ assign inputOneSecondHalf=A[8:15];
 assign inputTwoFirstHalf=B[0:7];
 assign inputTwoSecondHalf=B[8:15];
 eightBitAdder Adder1(inputOneFirstHalf, inputTwoFirstHalf, Ci, Ctr, OutputFirstHalf);
-assign Ctr2= (split16==1)?0:Ctr;
-//condInput splitter(Ctr, split16, Ctr2);
+condInput splitter(Ctr, split16, Ctr2);
 eightBitAdder Adder2(inputOneSecondHalf, inputTwoSecondHalf, Ctr2, Co, OutputSecondHalf);
 assign S={OutputFirstHalf,OutputSecondHalf};
 endmodule
