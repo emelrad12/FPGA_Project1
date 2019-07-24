@@ -1,8 +1,8 @@
-module thirtyTwoBitAdder (A, B, Ci, Co, S, Split);
+module thirtyTwoBitAdder (A, B, Ci, Co, S, Split16, Split32);
 
 input wire [0:31] A;
 input wire [0:31] B;
-input wire Ci,Split;
+input wire Ci,Split32,Split16;
 output wire [0:31] S;
 output wire Co;
 wire [0:15] arrayA1,arrayA2,arrayB1,arrayB2,arrayS1,arrayS2;
@@ -18,16 +18,20 @@ sixteenBitAdder Adder1(
 	.Ci       (Ci),
 	.Co       (Tmpw1),
 	.S        (arrayS1),
-	.Split    (Tmpw3)
+	.split16    (Split16)
 	);
-assign Tmpw2= (Split==1)?Tmpw1:0;
+condInput splitter(
+	.in       (Tmpw1),
+	.cond     (Split32),
+	.out      (Tmpw2)
+	);
 sixteenBitAdder Adder2(
    .A        (arrayA2),
 	.B        (arrayB2),
 	.Ci       (Tmpw2),
 	.Co       (Co),
 	.S        (arrayS2),
-	.Split    (Tmpw4)
+	.split16    (Split16)
 	);
 	
 assign S={arrayS1,arrayS2};
